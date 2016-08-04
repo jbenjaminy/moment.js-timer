@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
+	<script>
+	var startTime = moment();
+	var timer = setInterval(function() {
+      var currentTime = moment();
+      var difference = currentTime.diff(startTime)
+      var clock = Math.round(difference/1000);
+      if (difference >= 1000) {
+          console.log(clock);
+      }
+  }, 1000);
+
+  var timeout = setTimeout(function () {
+      clearInterval(timer);
+      console.log('DONE!');
+    }, 10000);
+  	
+	</script>
+</body>
+</html>
